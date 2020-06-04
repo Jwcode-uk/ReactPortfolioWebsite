@@ -1,0 +1,8 @@
+{
+  "name": "ReactPortfolioWebsite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Jwcode-uk/ReactPortfolioWebsite.git",
+  "author": "Jwcode-uk <Jonathanwhite0000@gmail.com>",
+  "license": "MIT"
+}
