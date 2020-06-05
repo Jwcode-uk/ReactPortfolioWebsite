@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Button } from "react-bulma-components";
 import { Card } from "./card.jsx";
@@ -8,142 +8,108 @@ import { Card } from "./card.jsx";
 function App() {
   return (
     <div className="App">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          {" "}
-          <a class="navbar-item" href="https://bulma.io">
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-            />
-          </a>
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">Home</a>
-
-            <a class="navbar-item">Documentation</a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">More</a>
-
-              <div class="navbar-dropdown">
-                <a class="navbar-item">About</a>
-                <a class="navbar-item">Jobs</a>
-                <a class="navbar-item">Contact</a>
-                <hr class="navbar-divider" />
-                <a class="navbar-item">Report an issue</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">Log in</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <section class="hero is-link is-fullheight-with-navbar">
+      <section class="hero is-primary is-large header-image">
+        <div class="hero-head"></div>
         <div class="hero-body">
-          <div class="container">
-            <p class="title">Fullheight hero with navbar</p>
+          <div class="container has-text-centered">
+            <h1>Typer</h1>
           </div>
         </div>
       </section>
+
       <div class="container">
-        <div class="notification">
-          This container is <strong>centered</strong> on desktop.
+        <br />
+        <center>
+          <figure class="image is-128x128">
+            <img class="is-rounded" src={require("./img/profile.jpg")} />
+          </figure>
+          <div class="columns is-tablet">
+            <div class="column"></div>
+            <div class="column is-three-fifths">
+              <p class="title">About Me</p>
+
+              <p>
+                Hi, I'm Jonathan, I'm a software developer currently studying in
+                2nd year at Newcastle University. I do freelance work in
+                Software Development and Youth Work as well as Charity Work when
+                I have chance. Feel Free to email me about any opportunitys you
+                have.
+              </p>
+            </div>
+            <div class="column"></div>
+          </div>
+        </center>
+      </div>
+      <div class="columns is-desktop">
+        <div class="column">
+          <Card
+            contents="text"
+            title="CardCollab"
+            imgSrc="cclogo.png"
+            imgAlt="this is a img"
+          />
+        </div>
+        <div class="column">
+          <Card
+            contents="text"
+            title="New Portfolio Website"
+            imgSrc="cclogo.png"
+            imgAlt="this is a img"
+          />
+        </div>
+        <div class="column ">
+          <Card
+            contents="text"
+            title="School Rep"
+            imgSrc="cclogo.png"
+            imgAlt="this is a img"
+          />
+        </div>
+        <div class="column">
+          <Card
+            contents="text"
+            title="Raising and Giving Week"
+            imgSrc="rag.png"
+            imgAlt="this is a img"
+          />
         </div>
       </div>
-      <div class="container">
-        <div class="columns is-desktop">
-          <div class="column">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
-          <div class="column">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
-          <div class="column ">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
-          <div class="column ">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
+      <div class="columns is-desktop">
+        <div class="column">
+          <Card
+            contents="text"
+            title="NCS"
+            imgSrc="ncs.png"
+            imgAlt="this is a img"
+          />
         </div>
-        <div class="columns is-desktop">
-          <div class="column">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
-          <div class="column">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
-          <div class="column ">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
-          <div class="column ">
-            <Card
-              contents="text"
-              title="title"
-              imgSrc="https://bulma.io/images/placeholders/1280x960.png"
-              imgAlt="this is a img"
-            />
-          </div>
+        <div class="column ">
+          <Card
+            contents="text"
+            title="Team Project"
+            imgSrc="android.jpg"
+            imgAlt="this is a img"
+          />
+        </div>
+        <div class="column ">
+          <Card
+            contents="NUCATs Treasurer"
+            title="title"
+            imgSrc="rag.png"
+            imgAlt="this is a img"
+          />
+        </div>
+        <div class="column ">
+          <Card
+            contents="text"
+            title="Altitude Foundation"
+            imgSrc="altitude.jpg"
+            imgAlt="this is a img"
+          />
         </div>
       </div>
+
+      <br />
       <div class="container">
         <div class="notification">
           This container is <strong>centered</strong> on desktop.
