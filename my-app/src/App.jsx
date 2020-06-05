@@ -4,6 +4,7 @@ import "./App.scss";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Button } from "react-bulma-components";
 import { Card } from "./card.jsx";
+import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 
 function App() {
   return (
@@ -40,93 +41,131 @@ function App() {
           </div>
         </center>
       </div>
-      <div class="columns is-desktop">
-        <div class="column">
-          <Card
-            contents="text"
-            title="CardCollab"
-            imgSrc="cclogo.png"
-            imgAlt="this is a img"
-          />
-        </div>
-        <div class="column">
-          <Card
-            contents="text"
-            title="New Portfolio Website"
-            imgSrc="cclogo.png"
-            imgAlt="this is a img"
-          />
-        </div>
-        <div class="column ">
-          <Card
-            contents="text"
-            title="School Rep"
-            imgSrc="cclogo.png"
-            imgAlt="this is a img"
-          />
-        </div>
-        <div class="column">
-          <Card
-            contents="text"
-            title="Raising and Giving Week"
-            imgSrc="rag.png"
-            imgAlt="this is a img"
-          />
-        </div>
-      </div>
-      <div class="columns is-desktop">
-        <div class="column">
-          <Card
-            contents="text"
-            title="NCS"
-            imgSrc="ncs.png"
-            imgAlt="this is a img"
-          />
-        </div>
-        <div class="column ">
-          <Card
-            contents="text"
-            title="Team Project"
-            imgSrc="android.jpg"
-            imgAlt="this is a img"
-          />
-        </div>
-        <div class="column ">
-          <Card
-            contents="NUCATs Treasurer"
-            title="title"
-            imgSrc="rag.png"
-            imgAlt="this is a img"
-          />
-        </div>
-        <div class="column ">
-          <Card
-            contents="text"
-            title="Altitude Foundation"
-            imgSrc="altitude.jpg"
-            imgAlt="this is a img"
-          />
-        </div>
+      <div class=" container cardGrid">
+        <Card
+          contents="text"
+          title="CardCollab"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="NCS"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="Raising and Giving Week"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="Team Project"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="School Rep"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="Alltitude Foundation"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="Website Comparision"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="Magic Mirror"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="University Work"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
+        <Card
+          contents="text"
+          title="App Development"
+          imgSrc="cclogo.png"
+          imgAlt="this is a img"
+        />
       </div>
 
       <br />
       <div class="container">
-        <div class="notification">
-          This container is <strong>centered</strong> on desktop.
+        <p class="title">My Services</p>
+
+        <div class="columns is-tablet">
+          <div class="column">
+            <i class="fas fa-magic"></i>
+            <p class="subtitle">Development</p>
+            <p>
+              I have experience developing in a range of lanuages such as C, C#,
+              Java, Python and many more. I'm alway looking for new projects to
+              improve myself.
+            </p>
+          </div>
+          <div class="column">
+            <p class="subtitle">Charity and Youth work</p>
+            <p>
+              In my spare time I like volunteering for charitys to help improve
+              peoples life. I also enjoy mentoring young people on programs such
+              as NCS as of the huge impact you have on them.
+            </p>
+          </div>{" "}
+          <div class="column">
+            <p class="subtitle">Social media management</p>
+            <p>
+              I have run social media campaign for projects to raise money for
+              charities as well as being given training by a media charity and a
+              online course on best pratice
+            </p>
+          </div>
         </div>
       </div>
+      <br />
+
       <footer class="footer">
         <div class="content has-text-centered">
+          <p>Contact me and I&#39;ll get back to you within a day.</p>
           <p>
-            <strong>Bulma</strong> by{" "}
-            <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
-            licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-            The website content is licensed{" "}
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-              CC BY NC SA 4.0
-            </a>
-            .
+            <i class="fa fa-map"></i> Newcastle, England
+          </p>
+          <p>
+            <i class="fa fa-envelope"></i> jwcode@pm.me
+          </p>
+          <button
+            type="button"
+            onclick="location.href='https://github.com/Jwcode-uk/'"
+            class="btn btn-outline-dark"
+          >
+            GitHub
+          </button>
+          <button
+            type="button"
+            onclick="location.href='https://www.linkedin.com/in/jonathan-white-536353172/'"
+            class="btn btn-outline-dark"
+          >
+            LinkedIn
+          </button>
+          <p>
+            <i>
+              &copy; Jonathan White 2020 | Banner Image &copy; Oliver Butler
+              2020
+            </i>
           </p>
         </div>
       </footer>
