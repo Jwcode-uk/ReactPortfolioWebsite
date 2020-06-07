@@ -7,11 +7,19 @@ export function Card(Props) {
     <center>
       <div class="cardContainer">
         <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src={require("./img/" + Props.imgSrc)} alt={Props.imgAlt} />
-            </figure>
-          </div>
+          {Props.imgSrc == "NA" ? (
+            <p></p>
+          ) : (
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img
+                  src={require("./img/" + Props.imgSrc)}
+                  alt={Props.imgAlt}
+                />
+              </figure>
+            </div>
+          )}
+
           <div class="card-content">
             <div class="media">
               <div class="media-content">
