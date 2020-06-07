@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/Jwcode-uk/ReactPortfolioWebsite.git",
   "author": "Jwcode-uk <Jonathanwhite0000@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react-scripts": "^3.4.1",
+    "simple-react-modal": "^0.5.1"
+  }
 }

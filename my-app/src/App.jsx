@@ -1,10 +1,10 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.scss";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Button } from "react-bulma-components";
 import { Card } from "./card.jsx";
-import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+import { Modal } from "react-bulma-components";
+import CardContent from "./cardContent";
 
 function App() {
   return (
@@ -28,19 +28,20 @@ function App() {
             <div class="column"></div>
             <div class="column is-three-fifths">
               <p class="title">About Me</p>
-
               <p>
                 Hi, I'm Jonathan, I'm a software developer currently studying in
                 2nd year at Newcastle University. I do freelance work in
                 Software Development and Youth Work as well as Charity Work when
                 I have chance. Feel Free to email me about any opportunitys you
                 have.
-              </p>
+              </p>{" "}
+              <CardContent />
             </div>
             <div class="column"></div>
           </div>
         </center>
       </div>
+
       <div class=" container cardGrid">
         <Card
           contents="text"
