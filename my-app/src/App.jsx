@@ -44,63 +44,76 @@ function App() {
 
       <div class=" container cardGrid">
         <Card
-          contents="text"
+          contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
           title="CardCollab"
           imgSrc="cclogo.png"
           imgAlt="this is a img"
+          date="Active"
+          tagType="is-primary"
         />
         <Card
-          contents="text"
+          contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
           title="NCS"
-          imgSrc="cclogo.png"
+          imgSrc="ncs.png"
           imgAlt="this is a img"
+          date="Active"
+          tagType="is-link"
         />
         <Card
-          contents="text"
-          title="Raising and Giving Week"
-          imgSrc="cclogo.png"
-          imgAlt="this is a img"
-        />
-        <Card
-          contents="text"
-          title="Team Project"
-          imgSrc="cclogo.png"
-          imgAlt="this is a img"
-        />
-        <Card
-          contents="text"
+          contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
           title="School Rep"
           imgSrc="cclogo.png"
           imgAlt="this is a img"
+          date="Active"
+          tagType="is-info"
         />
         <Card
-          contents="text"
+          contents="I work voluntary for a allitude foundation supporting and mentoring young people into getting into stem"
           title="Alltitude Foundation"
-          imgSrc="cclogo.png"
+          imgSrc="altitude.jpg"
           imgAlt="this is a img"
+          date="Active"
         />
         <Card
           contents="text"
           title="Website Comparision"
-          imgSrc="cclogo.png"
+          imgSrc="react.png"
           imgAlt="this is a img"
+          date="Active"
         />
         <Card
           contents="text"
           title="Magic Mirror"
-          imgSrc="cclogo.png"
+          imgSrc="tf.png"
           imgAlt="this is a img"
+          date="Active"
         />
         <Card
           contents="text"
           title="University Work"
-          imgSrc="cclogo.png"
+          imgSrc="usb.jpg"
           imgAlt="this is a img"
+          date="Active"
+        />
+        <Card
+          contents="I did a week of charity work supporting a wide range of charities across the north east through a range of activities."
+          title="Raising and Giving"
+          imgSrc="rag.png"
+          imgAlt="this is a img"
+          date="02/2020"
         />
         <Card
           contents="text"
-          title="App Development"
-          imgSrc="cclogo.png"
+          title="Team Project"
+          imgSrc="android.jpg"
+          imgAlt="this is a img"
+          date="09/2019 - 05/2020"
+        />
+
+        <Card
+          contents="text"
+          title="First Face to Face"
+          imgSrc="first.png"
           imgAlt="this is a img"
         />
       </div>

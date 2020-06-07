@@ -14,7 +14,14 @@ export function CardContent(Props) {
   } else {
     return (
       <div class="container">
+        <p>
+          I have been working with 3 others on a startup app called CardCollab
+          which is a revision app. We are creating using nextJS to allow us to
+          make it serverless and hence very scalable and easy to access. We are
+          currently working on intergrating AWS services into the apps backend.
+        </p>
         <hr />
+        <p class="title">National Citzen Service</p>
         <p>
           I have worked with multiple providers to develop young people and
           facilate them in creating their social action project. I work on NCS
@@ -42,6 +49,8 @@ export function CardContent(Props) {
         </p>
 
         <hr />
+        <p class="title">Alltitude Foundation</p>
+
         <p>
           I volunteer my spare time to mentor 4 young people from disadvantaged
           background on STEM through a project of their choosing. This is to
@@ -50,8 +59,14 @@ export function CardContent(Props) {
           the charities support and funding.
         </p>
         <ImageThird file="BBC_Microbit.jpg" />
-
+        <p>
+          Through this I advise them or a collabrative project using a BBC
+          Microbit to make a range of project including robots and projects
+          aimed at LGBT rights.
+        </p>
         <hr />
+        <p class="title">School Representative</p>
+
         <p>
           I partake in meetings and boards represent at first my year of 304 but
           now my whole school to try improve the university experience for the
@@ -78,5 +93,46 @@ export function CardContent(Props) {
     );
   }
 }
-
+// <Card
+//   contents="text"
+//   title="CardCollab"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
+// <Card
+//   contents="text"
+//   title="Team Project"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
+// <Card
+//   contents="text"
+//   title="Alltitude Foundation"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
+// <Card
+//   contents="text"
+//   title="Website Comparision"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
+// <Card
+//   contents="text"
+//   title="Magic Mirror"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
+// <Card
+//   contents="text"
+//   title="University Work"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
+// <Card
+//   contents="text"
+//   title="App Development"
+//   imgSrc="cclogo.png"
+//   imgAlt="this is a img"
+// />
 export default CardContent;

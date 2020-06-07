@@ -15,7 +15,12 @@ export function Card(Props) {
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title">{Props.title}</p>
+                <p class="subtitle">
+                  {Props.title}
+                  <span class={"tag is-pulled-right " + Props.tagType}>
+                    {Props.date}
+                  </span>
+                </p>
               </div>
             </div>
             <div class="content">{Props.contents}</div>
