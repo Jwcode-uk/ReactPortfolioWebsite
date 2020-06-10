@@ -5,9 +5,13 @@ import { Button } from "react-bulma-components";
 import { Card } from "./card.jsx";
 import { Modal } from "react-bulma-components";
 import CardContent from "./cardContent";
+import { useTransition, animated, useSpring } from "react-spring";
 
 function App() {
   const [context, setContext] = useState(null);
+
+  const [toggle, set] = useState(false);
+  const props = useSpring({ opacity: toggle ? 1 : 0 });
 
   return (
     <div className="App">
@@ -29,23 +33,34 @@ function App() {
           <div class="columns is-tablet">
             <div class="column"></div>
             <div class="column is-three-fifths">
-              <p class="title">About me</p>
+              <p class="title">{toggle}</p>
               <p>
                 Hi, I'm Jonathan, I'm a software developer currently studying in
                 2nd year at Newcastle University. I do freelance work in
                 Software Development and Youth Work as well as Charity Work when
                 I have chance. Feel Free to email me about any opportunitys you
                 have.
-              </p>{" "}
-              <CardContent display={context} />
+              </p>
             </div>
             <div class="column"></div>
           </div>
         </center>
       </div>
+      <br />
+      <div class="container cardGrid">
+        <a
+          onClick={() => {
+            set(false);
 
-      <div class=" container cardGrid">
-        <a onClick={() => setContext("cc")}>
+            document
+              .getElementById("content")
+              .scrollIntoView({ block: "end", behavior: "smooth" });
+            setTimeout(() => {
+              setContext("cc");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
             title="CardCollab"
@@ -55,7 +70,19 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a onClick={() => setContext("ncs")}>
+        <a
+          onClick={() => {
+            set(false);
+            document
+              .getElementById("content")
+              .scrollIntoView({ block: "end", behavior: "smooth" });
+
+            setTimeout(() => {
+              setContext("ncs");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
             title="NCS"
@@ -65,7 +92,15 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a onClick={() => setContext("sr")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("sr");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
             title="School Rep"
@@ -75,7 +110,15 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a onClick={() => setContext("af")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("af");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="I work voluntary for a allitude foundation supporting and mentoring young people into getting into stem"
             title="Alltitude Foundation"
@@ -85,7 +128,15 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a onClick={() => setContext("pw")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("pw");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="text"
             title="Portfolio Website"
@@ -95,7 +146,15 @@ function App() {
             tagType="is-warning"
           />
         </a>
-        <a onClick={() => setContext("mm")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("mm");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="text"
             title="Magic Mirror"
@@ -105,7 +164,15 @@ function App() {
             tagType="is-warning"
           />
         </a>
-        <a onClick={() => setContext("uw")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("uw");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="text"
             title="University Work"
@@ -115,7 +182,15 @@ function App() {
             tagType="is-primary"
           />
         </a>
-        <a onClick={() => setContext("rag")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("rag");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="I did a week of charity work supporting a wide range of charities across the north east through a range of activities."
             title="Raising and Giving"
@@ -124,14 +199,15 @@ function App() {
             date="02/2020"
           />
         </a>
-        <Card
-          contents="text"
-          title="Team Project"
-          imgSrc="android.jpg"
-          imgAlt="this is a img"
-          date="09/2019 - 05/2020"
-        />
-        <a onClick={() => setContext("ff")}>
+        <a
+          onClick={() => {
+            set(false);
+            setTimeout(() => {
+              setContext("ff");
+              set(true);
+            }, 1000);
+          }}
+        >
           <Card
             contents="text"
             title="First Face to Face"
@@ -141,38 +217,19 @@ function App() {
         </a>
       </div>
 
-      <br />
-      <div class="container">
-        <p class="title">My Services</p>
-
-        <div class="columns is-tablet">
-          <div class="column">
-            <i class="fas fa-magic"></i>
-            <p class="subtitle">Development</p>
-            <p>
-              I have experience developing in a range of lanuages such as C, C#,
-              Java, Python and many more. I'm alway looking for new projects to
-              improve myself.
-            </p>
-          </div>
-          <div class="column">
-            <p class="subtitle">Charity and Youth work</p>
-            <p>
-              In my spare time I like volunteering for charitys to help improve
-              peoples life. I also enjoy mentoring young people on programs such
-              as NCS as of the huge impact you have on them.
-            </p>
-          </div>{" "}
-          <div class="column">
-            <p class="subtitle">Social media management</p>
-            <p>
-              I have run social media campaign for projects to raise money for
-              charities as well as being given training by a media charity and a
-              online course on best pratice
-            </p>
+      <center>
+        <div class="container">
+          <div class="columns is-tablet">
+            <div class="column"></div>
+            <div class="column is-three-fifths">
+              <animated.div style={props} id="content">
+                <CardContent display={context} />
+              </animated.div>
+            </div>
+            <div class="column"></div>
           </div>
         </div>
-      </div>
+      </center>
       <br />
 
       <footer class="footer">

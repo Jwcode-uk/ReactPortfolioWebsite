@@ -4,6 +4,7 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Tweet } from "react-twitter-widgets";
 import { ImageThird } from "./imageThird.jsx";
 import { Card } from "./card.jsx";
+import { CSSTransition } from "react-transition-group";
 
 export function CardContent(Props) {
   if (Props.display == "cc") {
@@ -92,7 +93,11 @@ export function CardContent(Props) {
       </div>
     );
   } else if (Props.display == "pw") {
-    return <div class="container"></div>;
+    return (
+      <div class="container">
+        <p>wip</p>
+      </div>
+    );
   } else if (Props.display == "mm") {
     return <div class="container"></div>;
   } else if (Props.display == "uw") {
@@ -100,35 +105,27 @@ export function CardContent(Props) {
       <div class=" cardGrid">
         <Card
           contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
-          title="CardCollab"
+          title="Team Project"
           imgSrc="NA"
           imgAlt="this is a img"
-          date="Active"
+          date="Complete"
           tagType="is-success"
         />
         <Card
           contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
-          title="NCS"
+          title="Algorithms"
           imgSrc="NA"
           imgAlt="this is a img"
-          date="Seasonal"
+          date="Complete"
           tagType="is-success"
         />
         <Card
           contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
-          title="School Rep"
+          title="Dissertation"
           imgSrc="NA"
           imgAlt="this is a img"
-          date="Active"
-          tagType="is-success"
-        />
-        <Card
-          contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
-          title="School Rep"
-          imgSrc="NA"
-          imgAlt="this is a img"
-          date="Active"
-          tagType="is-success"
+          date="in Progress"
+          tagType="is-warning"
         />
       </div>
     );
