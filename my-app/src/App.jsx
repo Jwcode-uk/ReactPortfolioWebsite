@@ -9,8 +9,17 @@ import { useTransition, animated, useSpring } from "react-spring";
 
 function App() {
   const [context, setContext] = useState(null);
-
   const [toggle, set] = useState(false);
+
+  const loadContent = (val) => {
+    set(false);
+    document.getElementById("content").scrollIntoView({ behavior: "smooth" });
+
+    setTimeout(() => {
+      setContext(val);
+      set(true);
+    }, 200);
+  };
   const props = useSpring({ opacity: toggle ? 1 : 0 });
 
   return (
@@ -33,7 +42,7 @@ function App() {
           <div class="columns is-tablet">
             <div class="column"></div>
             <div class="column is-three-fifths">
-              <p class="title">{toggle}</p>
+              <p class="title">About me</p>
               <p>
                 Hi, I'm Jonathan, I'm a software developer currently studying in
                 2nd year at Newcastle University. I do freelance work in
@@ -47,20 +56,10 @@ function App() {
         </center>
       </div>
       <br />
-      <div class="container cardGrid">
-        <a
-          onClick={() => {
-            set(false);
+      <p class="title">My Work</p>
 
-            document
-              .getElementById("content")
-              .scrollIntoView({ block: "end", behavior: "smooth" });
-            setTimeout(() => {
-              setContext("cc");
-              set(true);
-            }, 1000);
-          }}
-        >
+      <div class="container cardGrid">
+        <a onClick={() => loadContent("cc")}>
           <Card
             contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
             title="CardCollab"
@@ -70,19 +69,7 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            document
-              .getElementById("content")
-              .scrollIntoView({ block: "end", behavior: "smooth" });
-
-            setTimeout(() => {
-              setContext("ncs");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("ncs")}>
           <Card
             contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
             title="NCS"
@@ -92,15 +79,7 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("sr");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("sr")}>
           <Card
             contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
             title="School Rep"
@@ -110,15 +89,7 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("af");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("af")}>
           <Card
             contents="I work voluntary for a allitude foundation supporting and mentoring young people into getting into stem"
             title="Alltitude Foundation"
@@ -128,17 +99,9 @@ function App() {
             tagType="is-success"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("pw");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("pw")}>
           <Card
-            contents="text"
+            contents="I'm currently upgrading my old portfolio website from html to react with hopes in increasing it's performance"
             title="Portfolio Website"
             imgSrc="react.png"
             imgAlt="this is a img"
@@ -146,35 +109,9 @@ function App() {
             tagType="is-warning"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("mm");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("uw")}>
           <Card
-            contents="text"
-            title="Magic Mirror"
-            imgSrc="tf.png"
-            imgAlt="this is a img"
-            date="Back Burner"
-            tagType="is-warning"
-          />
-        </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("uw");
-              set(true);
-            }, 1000);
-          }}
-        >
-          <Card
-            contents="text"
+            contents="This hold a archive of my work I have done while at university"
             title="University Work"
             imgSrc="usb.jpg"
             imgAlt="this is a img"
@@ -182,15 +119,7 @@ function App() {
             tagType="is-primary"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("rag");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("rag")}>
           <Card
             contents="I did a week of charity work supporting a wide range of charities across the north east through a range of activities."
             title="Raising and Giving"
@@ -199,15 +128,7 @@ function App() {
             date="02/2020"
           />
         </a>
-        <a
-          onClick={() => {
-            set(false);
-            setTimeout(() => {
-              setContext("ff");
-              set(true);
-            }, 1000);
-          }}
-        >
+        <a onClick={() => loadContent("ff")}>
           <Card
             contents="text"
             title="First Face to Face"
