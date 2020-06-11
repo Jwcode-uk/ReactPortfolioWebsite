@@ -7,7 +7,7 @@ export function ImageThird(Props) {
     <div class="columns is-tablet">
       <div class="column"></div>
       <div class="column is-three-fifths">
-        <img src={require("./img/" + Props.file)}></img>
+        <img class="rounded-corners" src={require("./img/" + Props.file)}></img>
       </div>
       <div class="column"></div>
     </div>

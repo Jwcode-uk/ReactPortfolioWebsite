@@ -20,7 +20,9 @@ function App() {
       set(true);
     }, 200);
   };
-  const props = useSpring({ opacity: toggle ? 1 : 0 });
+  const props = useSpring({
+    opacity: toggle ? 1 : 0,
+  });
 
   return (
     <div className="App">
@@ -111,7 +113,7 @@ function App() {
         </a>
         <a onClick={() => loadContent("uw")}>
           <Card
-            contents="This hold a archive of my work I have done while at university"
+            contents="This hold a archive of my work I have done or am currently working on while at university"
             title="University Work"
             imgSrc="usb.jpg"
             imgAlt="this is a img"
@@ -130,10 +132,11 @@ function App() {
         </a>
         <a onClick={() => loadContent("ff")}>
           <Card
-            contents="text"
+            contents="I volunteered with First to show newcastle university to Young people and encourage them they can come to further education"
             title="First Face to Face"
             imgSrc="first.png"
             imgAlt="this is a img"
+            date="07/2019"
           />
         </a>
       </div>
@@ -143,8 +146,17 @@ function App() {
           <div class="columns is-tablet">
             <div class="column"></div>
             <div class="column is-three-fifths">
+              <br />
               <animated.div style={props} id="content">
-                <CardContent display={context} />
+                <div class="container" border-radius="25px">
+                  <div
+                    id="rcorners"
+                    class=" has-background-light"
+                    border-radius="25px"
+                  >
+                    <CardContent display={context} />
+                  </div>
+                </div>
               </animated.div>
             </div>
             <div class="column"></div>

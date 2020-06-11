@@ -7,10 +7,9 @@ import { Card } from "./card.jsx";
 import { CSSTransition } from "react-transition-group";
 
 export function CardContent(Props) {
-  if (Props.display == "cc") {
+  if (Props.display === "cc") {
     return (
-      <div class="container">
-        <hr />
+      <div>
         <p class="title">CardCollab</p>
 
         <p>
@@ -22,10 +21,9 @@ export function CardContent(Props) {
         <hr />
       </div>
     );
-  } else if (Props.display == "ncs") {
+  } else if (Props.display === "ncs") {
     return (
-      <div class="container">
-        <hr />
+      <div>
         <p class="title">National Citzen Service</p>
         <p>
           I have worked with multiple providers to develop young people and
@@ -55,10 +53,9 @@ export function CardContent(Props) {
         <hr />
       </div>
     );
-  } else if (Props.display == "sr") {
+  } else if (Props.display === "sr") {
     return (
-      <div class="container">
-        <hr />
+      <div>
         <p class="title">School Representative</p>
 
         <p>
@@ -70,10 +67,9 @@ export function CardContent(Props) {
         <hr />
       </div>
     );
-  } else if (Props.display == "af") {
+  } else if (Props.display === "af") {
     return (
-      <div class="container">
-        <hr />
+      <div>
         <p class="title">Alltitude Foundation</p>
 
         <p>
@@ -92,15 +88,21 @@ export function CardContent(Props) {
         <hr />
       </div>
     );
-  } else if (Props.display == "pw") {
+  } else if (Props.display === "pw") {
     return (
-      <div class="container">
-        <p>wip</p>
+      <div>
+        <p class="title">New Portfolio Websitre</p>
+        <p>
+          My old portfolio website was made using bootstrap 4 and was slow to
+          load due to how heavy bootstrap is and the javascript libraries I was
+          using. My aim is to lighten my new portfolio website up by using react
+          soi the client only gets what they need rather then the whole site.
+        </p>
       </div>
     );
-  } else if (Props.display == "mm") {
+  } else if (Props.display === "mm") {
     return <div class="container"></div>;
-  } else if (Props.display == "uw") {
+  } else if (Props.display === "uw") {
     return (
       <div class=" cardGrid">
         <Card
@@ -129,10 +131,9 @@ export function CardContent(Props) {
         />
       </div>
     );
-  } else if (Props.display == "rag") {
+  } else if (Props.display === "rag") {
     return (
       <div class="container">
-        <hr />
         <p class="title">Raising and Giving week</p>
 
         <p>
@@ -142,12 +143,29 @@ export function CardContent(Props) {
           this is a small part of me doing that
         </p>
         <ImageThird file="fairShare.png" />
-        <hr />
       </div>
     );
-  } else if (Props.display == "ff") {
-    return <div class="container"></div>;
-  } else if (Props.display == null) {
+  } else if (Props.display === "ff") {
+    return (
+      <div class="container">
+        <div class="container">
+          <p class="title">Raising and Giving week</p>
+
+          <p>
+            I worked with first group to lead a group of young people from
+            Carlisle around Newcastle and Northumbria universitys enaging with
+            them and showing them that they can could to higher education.
+          </p>
+          <ImageThird file="firstPic.jpg" />
+          <p>
+            After this we spent time reflecting on way we could improve the
+            program to better facilate the young people to tour the university
+            and learn about uni life.
+          </p>
+        </div>
+      </div>
+    );
+  } else if (Props.display === null) {
     {
       return <div class="container"></div>;
     }

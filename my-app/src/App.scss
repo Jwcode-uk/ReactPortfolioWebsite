@@ -25,7 +25,9 @@
     transform: rotate(360deg);
   }
 }
-
+img.rounded-corners {
+  border-radius: 30px;
+}
 .header-image {
   background-color: #282c34;
   width: 100%;
@@ -71,4 +73,9 @@
 
 .card {
   height: max-content;
+}
+div.rounded-corners {
+  border-radius: 25px;
+
+  padding: 20px;
 }
