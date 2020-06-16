@@ -3,7 +3,9 @@ import "./App.scss";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Card } from "./card.jsx";
 import CardContent from "./cardContent";
-import { useTransition, animated, useSpring } from "react-spring";
+import { animated, useSpring } from "react-spring";
+import Typewriter from "typewriter-effect";
+import Modal from "react-modal";
 
 function App() {
   const [context, setContext] = useState(null);
@@ -16,11 +18,36 @@ function App() {
       setContext(val);
       set(true);
       document.getElementById("content").scrollIntoView({ behavior: "smooth" });
-    }, 200);
+    }, 700);
   };
   const props = useSpring({
     opacity: toggle ? 1 : 0,
   });
+
+  function openModal() {
+    set(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal() {
+    set(false);
+  }
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      background: "rgba(201, 76, 76, 0)",
+      border: "none",
+    },
+  };
 
   return (
     <div className="App">
@@ -28,7 +55,15 @@ function App() {
         <div class="hero-head"></div>
         <div class="hero-body">
           <div class="container has-text-centered">
-            <h1>Typer</h1>
+            <h1>
+              <Typewriter
+                options={{
+                  strings: ["Hello", "Howdy", "Hi"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </h1>
           </div>
         </div>
       </section>
@@ -49,11 +84,26 @@ function App() {
             </center>
 
             <p class="title">About me</p>
-            <p>
+            <p class="subtitle">
               Hi, I'm Jonathan, I'm a software developer currently studying in
               2nd year at Newcastle University. I do freelance work in Software
               Development and Youth Work as well as Charity Work when I have
               chance. Feel Free to email me about any opportunitys you have.
+            </p>
+            <br />
+
+            <p>
+              <a onClick={() => loadContent("cm")} class="button">
+                Contact Me
+              </a>
+              &emsp;{" "}
+              <a href="Jonathan_White_CV.pdf" download class="button">
+                Download my CV
+              </a>
+              &emsp;{" "}
+              <a href="https://github.com/Jwcode-uk" class="button">
+                GitHub
+              </a>
             </p>
           </div>
           <div class="column"></div>
@@ -149,17 +199,31 @@ function App() {
             <div class="column"></div>
             <div class="column is-three-fifths">
               <br />
-              <animated.div style={props} id="content">
-                <div class="container" border-radius="25px">
-                  <div
-                    id="rounded"
-                    class=" has-background-light"
-                    border-radius="25px"
-                  >
-                    <CardContent display={context} />
+              <Modal
+                isOpen={toggle}
+                onAfterOpen={afterOpenModal}
+                onRequestClose={closeModal}
+                contentLabel="Example Modal"
+                style={customStyles}
+              >
+                <animated.div style={props} id="content">
+                  <div class="container" border-radius="25px">
+                    <div
+                      id="rounded"
+                      class=" has-background-light"
+                      border-radius="25px"
+                    >
+                      <a
+                        class="is-pulled-right delete is-large "
+                        onClick={() => closeModal()}
+                      ></a>
+                      <center>
+                        <CardContent display={context} />
+                      </center>
+                    </div>
                   </div>
-                </div>
-              </animated.div>
+                </animated.div>
+              </Modal>
             </div>
             <div class="column"></div>
           </div>

@@ -6,7 +6,7 @@ export function Card(Props) {
   return (
     <div class="cardContainer ">
       <div class="card">
-        {Props.imgSrc == "NA" ? (
+        {Props.imgSrc === "NA" ? (
           <p></p>
         ) : (
           <div class="card-image">

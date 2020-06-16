@@ -4,7 +4,6 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Tweet } from "react-twitter-widgets";
 import { ImageThird } from "./imageThird.jsx";
 import { Card } from "./card.jsx";
-import { CSSTransition } from "react-transition-group";
 
 export function CardContent(Props) {
   if (Props.display === "cc") {
@@ -32,7 +31,8 @@ export function CardContent(Props) {
           opportunity to help young people develop themselve soo much in a short
           span of time.
         </p>
-        <Tweet tweetId="1194382028470403072" />
+        <Tweet tweetId="1194382028470403072" options={{ align: "center" }} />
+
         <script
           async
           src="https://platform.twitter.com/widgets.js"
@@ -105,22 +105,32 @@ export function CardContent(Props) {
   } else if (Props.display === "uw") {
     return (
       <div class=" cardGrid">
-        <Card
-          contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
-          title="Team Project"
-          imgSrc="NA"
-          imgAlt="this is a img"
-          date="Complete"
-          tagType="is-success"
-        />
-        <Card
-          contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
-          title="Algorithms"
-          imgSrc="NA"
-          imgAlt="this is a img"
-          date="Complete"
-          tagType="is-success"
-        />
+        <a
+          href="https://github.com/Jwcode-uk/Team-Project---BackInTyne"
+          class="button"
+        >
+          <Card
+            contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
+            title="Team Project"
+            imgSrc="NA"
+            imgAlt="this is a img"
+            date="Complete"
+            tagType="is-success"
+          />{" "}
+        </a>{" "}
+        <a
+          href="https://github.com/Jwcode-uk/Algorithms---Glass-Cutting-Algorithm"
+          class="button"
+        >
+          <Card
+            contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
+            title="Algorithms"
+            imgSrc="NA"
+            imgAlt="this is a img"
+            date="Complete"
+            tagType="is-success"
+          />{" "}
+        </a>
         <Card
           contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
           title="Dissertation"
@@ -169,6 +179,18 @@ export function CardContent(Props) {
     {
       return <div class="container"></div>;
     }
+  } else if (Props.display === "cm") {
+    return (
+      <div class="container">
+        <div class="container">
+          <p class="title">Contact</p>
+
+          <p>Phone Icon 07561042929</p>
+          <p>Email Icon jwcode@pm.com</p>
+          <p>Location Icon Newcastle-upon-Tyne, England</p>
+        </div>
+      </div>
+    );
   } else {
     return <div class="container"></div>;
   }

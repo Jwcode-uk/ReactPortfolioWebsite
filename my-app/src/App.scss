@@ -107,3 +107,47 @@ img.rounded-corners-top {
 
   z-index: 1000; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+@media screen and (max-width: 600px) {
+  #tweet {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+.ReactModal__Html--open,
+.ReactModal__Body--open {
+  overflow: hidden; /* prevents background page from scrolling when the modal is open */
+}
+
+.ReactModal__Overlay {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReactModal__Content {
+  background: white;
+  width: 80rem;
+  max-width: calc(100vw - 1rem);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close-btn {
+  cursor: pointer;
+  top: 1.5rem;
+  right: 1.5rem;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+}
