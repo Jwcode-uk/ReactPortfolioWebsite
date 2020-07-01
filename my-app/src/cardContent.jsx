@@ -4,6 +4,7 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Tweet } from "react-twitter-widgets";
 import { ImageThird } from "./imageThird.jsx";
 import { Card } from "./card.jsx";
+import { FaPhone, FaEnvelope, FaMapPin } from "react-icons/fa";
 
 export function CardContent(Props) {
   if (Props.display === "cc") {
@@ -12,10 +13,27 @@ export function CardContent(Props) {
         <p class="title">CardCollab</p>
 
         <p>
-          I have been working with 3 others on a startup app called CardCollab
+          I have been working with 2 others on a startup app called CardCollab
           which is a revision app. We are creating using nextJS to allow us to
           make it serverless and hence very scalable and easy to access. We are
-          currently working on intergrating AWS services into the apps backend.
+          currently working on intergrating AWS services into the apps backend
+          such as dynamoDB.
+        </p>
+        <br />
+        <p>
+          Our goal with this project is to make a minimualist Revision app
+          eventually implementing some form of machine learning to optimize the
+          user's revision.
+        </p>
+        <br />
+        <p>
+          <a href="https://github.com/Jwcode-uk" class="button">
+            Github
+          </a>
+          &emsp;
+          <a href="https://cardcollab.com/" class="button">
+            Dev website
+          </a>
         </p>
         <hr />
       </div>
@@ -50,7 +68,13 @@ export function CardContent(Props) {
           doesn't actually enage the young people and get them to develop skill
           in a fun way while completely a community project
         </p>
-        <hr />
+        <br />
+        <p>
+          This summer I have been promoted from my Team Assistent to Team
+          Leader. in this new role I have increase responsiblity for the young
+          people and ensuring the have safe but exceptional experience on the
+          NCS program.
+        </p>
       </div>
     );
   } else if (Props.display === "sr") {
@@ -63,6 +87,18 @@ export function CardContent(Props) {
           now my whole school to try improve the university experience for the
           students. Through this I have pushed for changes in a wide range of
           areas to improve students experience within the School of Computing
+        </p>
+        <br />
+        <p>
+          During Covid I have been attend extra meetings to dicuss and vote on
+          change to programs at the school of computing ensuring they are fair
+          to students in these exceptional circumstances
+        </p>
+        <br />
+        <p>
+          This academic year (2020-2021) I went from being a Course Rep to
+          School Rep where I represent my school cohort on boards at the
+          students union as well as all my previous boards.
         </p>
         <hr />
       </div>
@@ -83,7 +119,8 @@ export function CardContent(Props) {
         <p>
           Through this I advise them or a collabrative project using a BBC
           Microbit to make a range of project including robots and projects
-          aimed at LGBT rights.
+          aimed at LGBTQ+ rights. I really enjoy doing this work as you have a
+          great impact on the young people persuing their passion
         </p>
         <hr />
       </div>
@@ -104,46 +141,42 @@ export function CardContent(Props) {
     return <div class="container"></div>;
   } else if (Props.display === "uw") {
     return (
-      <div class=" cardGrid">
-        <a
-          href="https://github.com/Jwcode-uk/Team-Project---BackInTyne"
-          class="button"
-        >
+      <div class="container cardGrid">
+        <a>
           <Card
-            contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
+            contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
+            title="Dissertation"
+            imgSrc="NA"
+            imgAlt="this is a img"
+            date="in Progress"
+            tagType="is-warning"
+          />
+        </a>
+        <a>
+          <Card
+            contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
             title="Team Project"
             imgSrc="NA"
             imgAlt="this is a img"
-            date="Complete"
-            tagType="is-success"
-          />{" "}
-        </a>{" "}
-        <a
-          href="https://github.com/Jwcode-uk/Algorithms---Glass-Cutting-Algorithm"
-          class="button"
-        >
+            date="in Progress"
+            tagType="is-warning"
+          />
+        </a>
+        <a>
           <Card
-            contents="I work for NCS where I help organise and run a youth-led program to enable young people to develop themselves"
+            contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
             title="Algorithms"
             imgSrc="NA"
             imgAlt="this is a img"
-            date="Complete"
-            tagType="is-success"
-          />{" "}
+            date="in Progress"
+            tagType="is-warning"
+          />
         </a>
-        <Card
-          contents="I represent my school at meetings pushing for improvements to our experiences and helping create adaption for COVID"
-          title="Dissertation"
-          imgSrc="NA"
-          imgAlt="this is a img"
-          date="in Progress"
-          tagType="is-warning"
-        />
       </div>
     );
   } else if (Props.display === "rag") {
     return (
-      <div class="container">
+      <div>
         <p class="title">Raising and Giving week</p>
 
         <p>
@@ -157,22 +190,20 @@ export function CardContent(Props) {
     );
   } else if (Props.display === "ff") {
     return (
-      <div class="container">
-        <div class="container">
-          <p class="title">Raising and Giving week</p>
+      <div>
+        <p class="title">Raising and Giving week</p>
 
-          <p>
-            I worked with first group to lead a group of young people from
-            Carlisle around Newcastle and Northumbria universitys enaging with
-            them and showing them that they can could to higher education.
-          </p>
-          <ImageThird file="firstPic.jpg" />
-          <p>
-            After this we spent time reflecting on way we could improve the
-            program to better facilate the young people to tour the university
-            and learn about uni life.
-          </p>
-        </div>
+        <p>
+          I worked with first group to lead a group of young people from
+          Carlisle around Newcastle and Northumbria universitys enaging with
+          them and showing them that they can could to higher education.
+        </p>
+        <ImageThird file="firstPic.jpg" />
+        <p>
+          After this we spent time reflecting on way we could improve the
+          program to better facilate the young people to tour the university and
+          learn about uni life.
+        </p>
       </div>
     );
   } else if (Props.display === null) {
@@ -181,60 +212,28 @@ export function CardContent(Props) {
     }
   } else if (Props.display === "cm") {
     return (
-      <div class="container">
-        <div class="container">
+      <div class="columns is-tablet">
+        <div class="column"></div>
+        <div class="column is-three-fifths">
           <p class="title">Contact</p>
-
-          <p>Phone Icon 07561042929</p>
-          <p>Email Icon jwcode@pm.com</p>
-          <p>Location Icon Newcastle-upon-Tyne, England</p>
+          <p>
+            <FaPhone />
+            &emsp;07561042929
+          </p>
+          <p>
+            <FaEnvelope />
+            &emsp; jwcode@pm.com
+          </p>
+          <p>
+            <FaMapPin />
+            &emsp;Newcastle-upon-Tyne, England
+          </p>
         </div>
+        <div class="column"></div>
       </div>
     );
   } else {
     return <div class="container"></div>;
   }
 }
-// <Card
-//   contents="text"
-//   title="CardCollab"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
-// <Card
-//   contents="text"
-//   title="Team Project"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
-// <Card
-//   contents="text"
-//   title="Alltitude Foundation"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
-// <Card
-//   contents="text"
-//   title="Website Comparision"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
-// <Card
-//   contents="text"
-//   title="Magic Mirror"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
-// <Card
-//   contents="text"
-//   title="University Work"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
-// <Card
-//   contents="text"
-//   title="App Development"
-//   imgSrc="cclogo.png"
-//   imgAlt="this is a img"
-// />
 export default CardContent;
