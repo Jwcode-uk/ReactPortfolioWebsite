@@ -115,8 +115,8 @@ function App() {
       <div class="container cardGrid">
         <a onClick={() => loadContent("cc")}>
           <Card
-            contents="I'm working with a small team to develop a serverless revision app using nextjs and react as well as a range of AWS services."
-            title="CardCollab"
+            contents="TODO"
+            title="NUCATS Treasurer"
             imgSrc="cclogo.png"
             imgAlt="this is a img"
             date="Active"
@@ -143,19 +143,11 @@ function App() {
             tagType="is-success"
           />
         </a>
-        {/*         <a onClick={() => loadContent("ff")}>
-          <Card
-            contents="I help run large society at newcastle university managing the finaces and planned activities"
-            title="NUCATS Treasurer"
-            imgSrc="first.png"
-            imgAlt="this is a img"
-            date="07/2019"
-          />
-        </a> */}
+
         <a onClick={() => loadContent("af")}>
           <Card
             contents="I work voluntary for a allitude foundation supporting and mentoring young people into getting into stem"
-            title="Alltitude Foundation"
+            title="Youth Mentoring in STEM"
             imgSrc="altitude.jpg"
             imgAlt="this is a img"
             date="Active"
